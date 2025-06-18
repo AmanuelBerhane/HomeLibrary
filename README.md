@@ -28,7 +28,8 @@ rails db:migrate
 rails server
 ```
 
-###Project Structure
+### Project Structure
+
 HomeLibrary/
 ├── app/                 # Main application code
 │   ├── assets/          # CSS, JavaScript, images
