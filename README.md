@@ -31,6 +31,7 @@ rails server
 ### Project Structure
 
 HomeLibrary/
+
 ├── app/                 # Main application code
 │   ├── assets/          # CSS, JavaScript, images
 │   ├── controllers/     # Controllers
