@@ -1,24 +1,40 @@
-# README
+# Home Library Management Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails CRUD application for tracking your reading list with search functionality and book cover support.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- **Full CRUD Operations** for book management
+- **Search Functionality**
+- **Book Cover Support** (uploads + automatic fetching)
+- **Reading Status Tracking** (to-read/reading/read)
+- **Responsive Design**
 
-* System dependencies
+## Technologies
 
-* Configuration
+- Ruby on Rails 7
+- PostgreSQL
+- Active Storage
+- Bootstrap 5
 
-* Database creation
 
-* Database initialization
+### Installation
+```bash
+git clone https://github.com/AmanuelBerhane/HomeLibrary.git
+cd HomeLibrary
+bundle install
+rails db:create
+rails db:migrate
+rails server
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Project Structure
+HomeLibrary/
+├── app/                 # Main application code
+│   ├── assets/          # CSS, JavaScript, images
+│   ├── controllers/     # Controllers
+│   ├── models/          # Models and business logic
+│   └── views/           # Views and templates
+├── config/              # Configuration files
+├── db/                  # Database migrations and schema
+└── storage/             # Active Storage files (book covers)
