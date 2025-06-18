@@ -32,11 +32,11 @@ rails server
 
 HomeLibrary/
 
-├── app/                 # Main application code
-│   ├── assets/          # CSS, JavaScript, images
-│   ├── controllers/     # Controllers
-│   ├── models/          # Models and business logic
-│   └── views/           # Views and templates
-├── config/              # Configuration files
-├── db/                  # Database migrations and schema
-└── storage/             # Active Storage files (book covers)
+    ├── app/                 # Main application code  
+    │   ├── assets/          # CSS, JavaScript, images
+    │   ├── controllers/     # Controllers
+    │   ├── models/          # Models and business logic
+    │   └── views/           # Views and templates
+    ├── config/              # Configuration files
+    ├── db/                  # Database migrations and schema
+    └── storage/             # Active Storage files (book covers)
