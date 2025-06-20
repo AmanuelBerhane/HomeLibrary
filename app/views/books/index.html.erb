@@ -1,2 +1,202 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+  <title>Stitch Design</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+  <div class="layout-container flex h-full grow flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-4 text-[#0d141c]">
+          <div class="size-4">
+          </div>
+          <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">HomeLibrary</h2>
+        </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <label class="flex flex-col min-w-40 !h-10 max-w-64">
+          <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+            <div
+              class="text-[#49719c] flex border-none bg-[#e7edf4] items-center justify-center pl-4 rounded-l-xl border-r-0"
+              data-icon="MagnifyingGlass"
+              data-size="24px"
+              data-weight="regular"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                ></path>
+              </svg>
+            </div>
+            <input
+              placeholder="Search"
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-full placeholder:text-[#49719c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+              value=""
+              />
+          </div>
+        </label>
+      </div>
+    </header>
+    <div class="px-40 flex flex-1 justify-center py-5">
+      <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+          <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">My Books</p>
+          <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal"
+          >
+            <span class="truncate">Add Book</span>
+
+            <% link_to books_create_path %>
+
+
+          </button>
+        </div>
+        <div class="px-4 py-3">
+          <label class="flex flex-col min-w-40 h-12 w-full">
+            <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+              <div
+                class="text-[#49719c] flex border-none bg-[#e7edf4] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                data-icon="MagnifyingGlass"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                placeholder="Search for books"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-full placeholder:text-[#49719c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                value=""
+                />
+            </div>
+          </label>
+        </div>
+        <div class="px-4 py-3 @container">
+          <div class="flex overflow-hidden rounded-xl border border-[#cedbe8] bg-slate-50">
+            <table class="flex-1">
+              <thead>
+              <tr class="bg-slate-50">
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 px-4 py-3 text-left text-[#0d141c] w-14 text-sm font-medium leading-normal">Cover</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Title</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Author</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 px-4 py-3 text-left text-[#0d141c] w-60 text-[#49719c] text-sm font-medium leading-normal">
+                  Actions
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="border-t border-t-[#cedbe8]">
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlB-VEQANbUdIXqrJg1EvlA76vuFwYLk5YyKRNeSnAghB0-0ecEOCf-xwppQGKsvBEoaISeBJFfsh6X_O2oKhrIVPTBTn6hbBSQZ2mjTSPO-YR-PqB9Kr7tqqvunlBwBTw3TOEhh4RWOLOyGNPkfVreJJm81mgEbh-eM9MFE2azGmX995MI9JAeYd025KgxlJ63RtA7tU5_BInuimyELyFIeoxpRFz4uo0V3phL_CNGpoMViq_f9ACfsrww20d2_lrx_WeiemqadtC");'
+                  ></div>
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                  The Dragon's Ascent
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                  Evelyn Reed
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Edit | Delete
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#cedbe8]">
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaM_GDR84-v2YRisbEsbwTue6FlT_PTlRR1e2ngJKZ7CqKsQLN7N6aFWEJ9kEH7w-A1jOKT73usfleUjsX1JLKnxMbaCkKFa09vAmWQ0cGo0LktE0lDqH7gckLS5X3GgLlevKfc8OfFeYOQcivPWpRCGUtl8qt022K6NJYbpe0bshjZjsGp7KUMEFjyV1EK3uFFTEodL3cbLZmaPqGCHR5tNVdQA9JP0bsvBO2EaASDl_ARVcoZNzyp1tXIxyomi5YdLTNQ49JGEqI");'
+                  ></div>
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                  Echoes of Tomorrow
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                  Julian Frost
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Edit | Delete
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#cedbe8]">
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1J5O_oW2Cdc3z8tA9QsEkggdPEG0ILRn-_WQzWPYGxCespuwY1XPJJqmcxpfbRnkFKG9hqAu0IMnr66yluvFRAbMbA166eLCt9i2UShbwpVzSbJe4f49V53LkjiDL2bmbQ4845q4uGduisbaZqfV65RsM_osBOsOtN992IVPFRG70r5b5ZPrCtwj3HMwtUuFfgYkSAkXnw6cTjPy3rOo6yt6rMdz6vLQOcrwJSUA4EBSelE7Fv2u8SSriyJtwsyfTKHzFu1n9JsTH");'
+                  ></div>
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                  The Silent Witness
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                  Clara Bennett
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Edit | Delete
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#cedbe8]">
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkui-_GwB3bnfW7W-jHS_8KmQjTnRgjQpsh_hbYPgCPE06eRin6fcXzGiuvzr_MEFQP7t3wC23J3MEeQ0iVNNoLABc99yUSi9rn2zVkzTsZjVWwKE5afX5W-zf-dwhtkAEJ2VV-ylxynMt5cqxVUW-DSCFOGLckFx8YIe9QM-fi_Mk1ehcNqECnjcGvXcK9akLS9kDG_k1lhf4FwHtI4G7dJiEOWjjgjHnThjnkajI95fv9kgBhnjJ6E2eM5EYXr_SmWEkYJ00sxON");'
+                  ></div>
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                  The Emperor's Legacy
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                  Arthur Sterling
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Edit | Delete
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#cedbe8]">
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTONTr3CiEq_TQHIgFe-Sk31cPQwIClVRdENpGzvDfd_qqAph8EyouDJL_bn02kj6kmMaSdA0BznIaV_nEie4qpxpzmSkpN3kYQ-wbgKl45xLk4MGYr7nQZnpo5ExjSnn0j7kAP6LD7qbvwyQth4x6TvuPL0kxhNdH6UsKnEKq4s8EV_mub27ndsiRgNQ7oRVkkmFSIj603hU3CCQpNL_qTWjjKJ99AI_xpmf-6UwWv3aCljgm2tZW-TLH6t6rJQLyTz825_5jreYO");'
+                  ></div>
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                  Lost in Translation
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                  Sophia Hayes
+                </td>
+                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Edit | Delete
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <style>
+              @container(max-width:56px){.table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56{display: none;}}
+              @container(max-width:176px){.table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176{display: none;}}
+              @container(max-width:296px){.table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296{display: none;}}
+              @container(max-width:416px){.table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416{display: none;}}
+          </style>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
