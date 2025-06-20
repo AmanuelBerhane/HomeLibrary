@@ -1,0 +1,124 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+  <title>Stitch Design</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+  <div class="layout-container flex h-full grow flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+      <div class="flex items-center gap-4 text-[#0d141c]">
+        <div class="size-4">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">My Library</h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-[#0d141c] text-sm font-medium leading-normal" href="#">My Books</a>
+          <a class="text-[#0d141c] text-sm font-medium leading-normal" href="#">Authors</a>
+          <a class="text-[#0d141c] text-sm font-medium leading-normal" href="#">Genres</a>
+        </div>
+        <button
+          class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e7edf4] text-[#0d141c] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+        >
+          <div class="text-[#0d141c]" data-icon="Plus" data-size="20px" data-weight="regular">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+            </svg>
+          </div>
+        </button>
+        <div
+          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgZsPy7yfbjdcX5twNptIaMkho8A_one9BtBE4vd068IObNUjqqM-7s9j3z5FlFK84yoQ6WsCYoCpbHcKevZmw4YKfYTJG1ARetzS1BZ2GktvddEl1YyP6zEDPYrjacfSgO_oEXOPBDwWcolrtF9OFxvXe2Kp3adyCJJtmdNQ4QuYalCCfqMYnAxDlr8w99-oeZFQyh658qgzoCeNXbzlpcDu1coYn-N8iBXuR_5MmxSmyhy3yrwMeNrUhyvf_sF75zXqCk2w82eUK");'
+        ></div>
+      </div>
+    </header>
+    <div class="px-40 flex flex-1 justify-center py-5">
+      <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">Edit Book Details</p></div>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Title</p>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-14 placeholder:text-[#49719c] p-4 text-base font-normal leading-normal"
+              value=""
+              />
+          </label>
+        </div>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Author</p>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-14 placeholder:text-[#49719c] p-4 text-base font-normal leading-normal"
+              value=""
+              />
+          </label>
+        </div>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Genre</p>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-14 placeholder:text-[#49719c] p-4 text-base font-normal leading-normal"
+              value=""
+              />
+          </label>
+        </div>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">ISBN</p>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-14 placeholder:text-[#49719c] p-4 text-base font-normal leading-normal"
+              value=""
+              />
+          </label>
+        </div>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <p class="text-[#0d141c] text-base font-medium leading-normal pb-2">Description</p>
+            <textarea
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none min-h-36 placeholder:text-[#49719c] p-4 text-base font-normal leading-normal"
+            ></textarea>
+          </label>
+        </div>
+        <div class="flex flex-col p-4">
+          <div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-[#cedbe8] px-6 py-14">
+            <div class="flex max-w-[480px] flex-col items-center gap-2">
+              <p class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center">Upload Cover Image</p>
+              <p class="text-[#0d141c] text-sm font-normal leading-normal max-w-[480px] text-center">Drag and drop or click to upload</p>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Upload</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex px-4 py-3 justify-end">
+          <button
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3490f3] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">Save Changes</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
