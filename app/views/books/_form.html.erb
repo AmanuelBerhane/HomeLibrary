@@ -1,42 +1,68 @@
-<%= form_with(model: book, local: true, html: { class: "space-y-6", multipart: true }) do |form| %>
-  <% if book.errors.any? %>
-    <div id="error_explanation" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-      <strong class="font-bold"><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</strong>
-      <ul class="mt-3 list-disc list-inside">
-        <% book.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+  <div class="flex-1 flex flex-col items-center justify-center px-4">
+    <div class="w-full max-w-lg">
+      <%= form_with(model: @book, local: true) do |form| %>
+        <% if @book.errors.any? %>
+          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+            <h3 class="font-bold"><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h3>
+            <ul class="mt-2 list-disc list-inside">
+              <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="mb-6">
+          <%= form.label :title, class: "block text-gray-700 font-semibold mb-2" %>
+          <%= form.text_field :title, placeholder: "Enter book title", class: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-base transition disabled:bg-gray-100 #{'border-red-400' if @book.errors[:title].any?}" %>
+          <% if @book.errors[:title].any? %>
+            <div class="text-red-500 text-sm mt-1"><%= @book.errors[:title].first %></div>
+          <% end %>
+        </div>
+
+        <div class="mb-6">
+          <%= form.label :author, class: "block text-gray-700 font-semibold mb-2" %>
+          <%= form.text_field :author, placeholder: "Enter author's name", class: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-base transition disabled:bg-gray-100 #{'border-red-400' if @book.errors[:author].any?}" %>
+          <% if @book.errors[:author].any? %>
+            <div class="text-red-500 text-sm mt-1"><%= @book.errors[:author].first %></div>
+          <% end %>
+        </div>
+
+        <div class="mb-6">
+          <%= form.label :genre, class: "block text-gray-700 font-semibold mb-2" %>
+          <%= form.text_field :genre, placeholder: "Enter genre", class: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-base transition disabled:bg-gray-100 #{'border-red-400' if @book.errors[:genre].any?}" %>
+          <% if @book.errors[:genre].any? %>
+            <div class="text-red-500 text-sm mt-1"><%= @book.errors[:genre].first %></div>
+          <% end %>
+        </div>
+
+        <div class="mb-8">
+          <%= form.label :pages, class: "block text-gray-700 font-semibold mb-2" %>
+          <%= form.number_field :pages, placeholder: "Enter number of pages", class: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-base transition disabled:bg-gray-100 #{'border-red-400' if @book.errors[:pages].any?}" %>
+          <% if @book.errors[:pages].any? %>
+            <div class="text-red-500 text-sm mt-1"><%= @book.errors[:pages].first %></div>
+          <% end %>
+        </div>
+
+        <div class="flex gap-4 justify-center">
+          <%= link_to "Cancel", books_path, class: "flex-1 text-center py-3 rounded-full bg-gray-100 text-gray-700 font-semibold hover:bg-gray-200 transition" %>
+          <%= form.submit @book.persisted? ? "Update Book" : "Save Book", class: "flex-1 py-3 rounded-full bg-blue-500 text-white font-bold hover:bg-blue-600 transition" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div>
-    <%= form.label :title, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.text_field :title, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
   </div>
-
-  <div>
-    <%= form.label :author, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.text_field :author, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
-  </div>
-
-  <div>
-    <%= form.label :genre, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.text_field :genre, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
-  </div>
-
-  <div>
-    <%= form.label :pages, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.number_field :pages, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
-  </div>
-
-  <div>
-    <%= form.label :cover_image, class: "block text-sm font-medium text-gray-700" %>
-    <%= form.file_field :cover_image, class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100" %>
-  </div>
-
-  <div class="flex justify-end gap-4">
-    <%= link_to 'Cancel', books_path, class: "inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-    <%= form.submit "Save Book", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-  </div>
-<% end %>
+</div>

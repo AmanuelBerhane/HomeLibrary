@@ -1,21 +1,14 @@
-<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-  <div class="layout-container flex h-full grow flex-col">
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
-      <div class="flex items-center gap-8">
-        <div class="flex items-center gap-4 text-[#0d141c]">
-          <div class="size-4">
-          </div>
-          <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">HomeLibrary</h2>
-        </div>
-      </div>
-    </header>
-    <div class="px-40 flex flex-1 justify-center py-5">
-      <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Add a New Book</h1>
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <%= render 'form', book: @book %>
-        </div>
-      </div>
+<div class="min-h-screen bg-slate-50" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+    <div class="flex items-center gap-4 text-[#0d141c]">
+      <div class="size-4"></div>
+      <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">HomeLibrary</h2>
+    </div>
+    <%= link_to 'Back to books', books_path, class: 'inline-block rounded-lg bg-[#e7edf4] text-[#0d141c] px-4 py-2 font-semibold shadow hover:bg-[#d1e3f8] transition' %>
+  </header>
+  <div class="flex items-center justify-center min-h-[80vh]">
+    <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-12">
+      <%= render 'form', book: @book %>
     </div>
   </div>
 </div>

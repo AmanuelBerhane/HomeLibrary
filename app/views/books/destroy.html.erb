@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
@@ -8,44 +9,31 @@
     href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
     />
 
-  <title>Stitch Design</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
+
 <body>
-<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-  <div class="layout-container flex h-full grow flex-col">
-    <div class="px-40 flex flex-1 justify-center py-5">
-      <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
-        <h1 class="text-[#0d141c] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-center pb-3 pt-5">Confirm Deletion</h1>
-        <div class="p-4">
-          <div class="flex items-stretch justify-between gap-4 rounded-xl">
-            <div class="flex flex-col gap-1 flex-[2_2_0px]">
-              <p class="text-[#49719c] text-sm font-normal leading-normal">Fiction</p>
-              <p class="text-[#0d141c] text-base font-bold leading-tight">The Secret Garden</p>
-              <p class="text-[#49719c] text-sm font-normal leading-normal">Frances Bennett</p>
-            </div>
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKDObw_OWNYyc7PpAOHyvYSGTkpLk-94fH5WROOBlkBIVHcPddRbqR3Va5X96086j1jRkgVpyZeBtFtCzcFO-3BygemdIx7_tq-sKoIpJ8he3spOn1KYCI0yzJr6ZkHMv7qFWReemxI01DAbgmMRqyAFd7saxh3Zm91QnvhWaUhoLjjqcKWLEKub3VKXpBDd99boJtDa1J0Dfj7GM2bxILwGJiNKkdL7KmJ8SqwDktCmhm2uzn8bCT2PXIXXuQvRdMLXNGiD1sfsiT");'
-            ></div>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 max-w-[480px] justify-center">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3490f3] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] grow"
-            >
-              <span class="truncate">Confirm Deletion</span>
-            </button>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-bold leading-normal tracking-[0.015em] grow"
-            >
-              <span class="truncate">Cancel</span>
-            </button>
-          </div>
-        </div>
+<div class="min-h-screen bg-slate-50" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf4] px-10 py-3">
+    <div class="flex items-center gap-4 text-[#0d141c]">
+      <div class="size-4"></div>
+      <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">HomeLibrary</h2>
+    </div>
+    <%= link_to 'Back to books', books_path, class: 'inline-block rounded-lg bg-[#e7edf4] text-[#0d141c] px-4 py-2 font-semibold shadow hover:bg-[#d1e3f8] transition' %>
+  </header>
+  <div class="flex items-center justify-center min-h-[80vh]">
+    <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-12">
+      <h1 class="text-2xl font-bold text-center mb-8">Confirm Deletion</h1>
+      <div class="mb-6 text-center">
+        <p class="text-lg font-semibold mb-2"><%= @book.title %></p>
+        <p class="text-gray-600 mb-1">Author: <%= @book.author %></p>
+        <p class="text-gray-600 mb-1">Genre: <%= @book.genre %></p>
+      </div>
+      <div class="flex gap-4 justify-center mt-8">
+        <%= form_tag book_path(@book), method: :delete, class: 'flex-1' do %>
+          <button type="submit" class="w-full py-3 rounded-full bg-blue-500 text-white font-bold hover:bg-blue-600 transition text-lg">Confirm Deletion</button>
+        <% end %>
+        <%= link_to 'Cancel', books_path, class: 'w-full py-3 rounded-full bg-gray-100 text-gray-700 font-bold hover:bg-gray-200 transition text-lg flex-1 text-center' %>
       </div>
     </div>
   </div>

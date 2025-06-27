@@ -9,9 +9,6 @@
     href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
     />
 
-  <title>Stitch Design</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 <body>
@@ -24,28 +21,6 @@
           </div>
           <h2 class="text-[#0d141c] text-lg font-bold leading-tight tracking-[-0.015em]">HomeLibrary</h2>
         </div>
-      <div class="flex flex-1 justify-end gap-8">
-        <label class="flex flex-col min-w-40 !h-10 max-w-64">
-          <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
-            <div
-              class="text-[#49719c] flex border-none bg-[#e7edf4] items-center justify-center pl-4 rounded-l-xl border-r-0"
-              data-icon="MagnifyingGlass"
-              data-size="24px"
-              data-weight="regular"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                ></path>
-              </svg>
-            </div>
-            <input
-              placeholder="Search"
-              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-full placeholder:text-[#49719c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-              value=""
-              />
-          </div>
-        </label>
       </div>
     </header>
     <div class="px-40 flex flex-1 justify-center py-5">
@@ -57,24 +32,7 @@
         <div class="px-4 py-3">
           <label class="flex flex-col min-w-40 h-12 w-full">
             <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
-              <div
-                class="text-[#49719c] flex border-none bg-[#e7edf4] items-center justify-center pl-4 rounded-l-xl border-r-0"
-                data-icon="MagnifyingGlass"
-                data-size="24px"
-                data-weight="regular"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                placeholder="Search for books"
-                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141c] focus:outline-0 focus:ring-0 border-none bg-[#e7edf4] focus:border-none h-full placeholder:text-[#49719c] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                value=""
-                />
-            </div>
+
           </label>
         </div>
         <div class="px-4 py-3 @container">
@@ -82,36 +40,31 @@
             <table class="flex-1">
               <thead>
               <tr class="bg-slate-50">
-                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 px-4 py-3 text-left text-[#0d141c] w-14 text-sm font-medium leading-normal">Cover</th>
-                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Title</th>
-                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Author</th>
-                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 px-4 py-3 text-left text-[#0d141c] w-60 text-[#49719c] text-sm font-medium leading-normal">
-                  Actions
-                </th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 px-4 py-3 text-left text-[#0d141c] w-[300px] text-sm font-medium leading-normal">Title</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 px-4 py-3 text-left text-[#0d141c] w-[200px] text-sm font-medium leading-normal">Author</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-512 px-4 py-3 text-left text-[#0d141c] w-[150px] text-sm font-medium leading-normal">Genre</th>
+                <th class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 px-4 py-3 text-left text-[#0d141c] w-60 text-sm font-medium leading-normal">Pages</th>
+                <th class="px-4 py-3 text-left text-[#0d141c] w-60 text-sm font-medium leading-normal">Actions</th>
               </tr>
               </thead>
               <tbody>
                 <% @books.each do |book| %>
                   <tr class="border-t border-t-[#cedbe8]">
-                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                      <% if book.cover_image.attached? %>
-                        <%= image_tag book.cover_image.variant(resize_to_limit: [40, 40]), class: "rounded-full w-10 h-10 object-cover" %>
-                      <% else %>
-                        <div
-                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10"
-                          style='background-image: url("https://i.pravatar.cc/40?u=<%= book.id %>");'
-                        ></div>
-                      <% end %>
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 px-4 py-3">
+                      <%= link_to book.title, book_path(book), class: 'text-[#49719c] underline' %>
                     </td>
                     <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                      <%= link_to book.title, book_path(book) %>
-                    </td>
-                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
                       <%= book.author %>
                     </td>
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                      <%= book.genre %>
+                    </td>
                     <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                      <%= link_to 'Edit', edit_book_path(book), class: "text-[#49719c]" %> |
-                      <%= link_to 'Delete', book_path(book), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: "text-[#49719c]" %>
+                      <%= book.pages %>
+                    </td>
+                    <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                      <%= link_to 'Edit', edit_book_path(book), class: "text-[#49719c] underline" %> |
+                      <%= link_to 'Delete', book_path(book), method: :destroy, data: { confirm: 'Are you sure?' }, class: "text-[#dc2626] underline" %>
                     </td>
                   </tr>
                 <% end %>

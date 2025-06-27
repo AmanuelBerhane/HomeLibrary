@@ -1,19 +1,17 @@
 # Home Library Management Application
 
-A Ruby on Rails CRUD application for tracking your books with listing of all books and book cover support.
+A Ruby on Rails CRUD application for tracking your home library books with responsive design.
 
 ## Features
 
 - **Full CRUD Operations** for book management
-- **Book Cover Support** (uploads + automatic fetching)
 - **Responsive Design**
 
 ## Technologies
 
 - Ruby on Rails 7
 - PostgreSQL
-- Active Storage
-- Bootstrap 5
+- Tailwind CSS
 
 
 ### Installation
