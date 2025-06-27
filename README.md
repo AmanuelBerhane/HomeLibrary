@@ -1,13 +1,11 @@
 # Home Library Management Application
 
-A Ruby on Rails CRUD application for tracking your reading list with search functionality and book cover support.
+A Ruby on Rails CRUD application for tracking your books with listing of all books and book cover support.
 
 ## Features
 
 - **Full CRUD Operations** for book management
-- **Search Functionality**
 - **Book Cover Support** (uploads + automatic fetching)
-- **Reading Status Tracking** (to-read/reading/read)
 - **Responsive Design**
 
 ## Technologies

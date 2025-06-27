@@ -52,15 +52,7 @@
       <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
         <div class="flex flex-wrap justify-between gap-3 p-4">
           <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">My Books</p>
-          <button
-            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal"
-          >
-            <span class="truncate">Add Book</span>
-
-            <% link_to books_create_path %>
-
-
-          </button>
+          <%= link_to "Add Book", new_book_path, class: "flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal" %>
         </div>
         <div class="px-4 py-3">
           <label class="flex flex-col min-w-40 h-12 w-full">
@@ -99,91 +91,30 @@
               </tr>
               </thead>
               <tbody>
-              <tr class="border-t border-t-[#cedbe8]">
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlB-VEQANbUdIXqrJg1EvlA76vuFwYLk5YyKRNeSnAghB0-0ecEOCf-xwppQGKsvBEoaISeBJFfsh6X_O2oKhrIVPTBTn6hbBSQZ2mjTSPO-YR-PqB9Kr7tqqvunlBwBTw3TOEhh4RWOLOyGNPkfVreJJm81mgEbh-eM9MFE2azGmX995MI9JAeYd025KgxlJ63RtA7tU5_BInuimyELyFIeoxpRFz4uo0V3phL_CNGpoMViq_f9ACfsrww20d2_lrx_WeiemqadtC");'
-                  ></div>
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                  The Dragon's Ascent
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
-                  Evelyn Reed
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                  Edit | Delete
-                </td>
-              </tr>
-              <tr class="border-t border-t-[#cedbe8]">
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaM_GDR84-v2YRisbEsbwTue6FlT_PTlRR1e2ngJKZ7CqKsQLN7N6aFWEJ9kEH7w-A1jOKT73usfleUjsX1JLKnxMbaCkKFa09vAmWQ0cGo0LktE0lDqH7gckLS5X3GgLlevKfc8OfFeYOQcivPWpRCGUtl8qt022K6NJYbpe0bshjZjsGp7KUMEFjyV1EK3uFFTEodL3cbLZmaPqGCHR5tNVdQA9JP0bsvBO2EaASDl_ARVcoZNzyp1tXIxyomi5YdLTNQ49JGEqI");'
-                  ></div>
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                  Echoes of Tomorrow
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
-                  Julian Frost
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                  Edit | Delete
-                </td>
-              </tr>
-              <tr class="border-t border-t-[#cedbe8]">
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1J5O_oW2Cdc3z8tA9QsEkggdPEG0ILRn-_WQzWPYGxCespuwY1XPJJqmcxpfbRnkFKG9hqAu0IMnr66yluvFRAbMbA166eLCt9i2UShbwpVzSbJe4f49V53LkjiDL2bmbQ4845q4uGduisbaZqfV65RsM_osBOsOtN992IVPFRG70r5b5ZPrCtwj3HMwtUuFfgYkSAkXnw6cTjPy3rOo6yt6rMdz6vLQOcrwJSUA4EBSelE7Fv2u8SSriyJtwsyfTKHzFu1n9JsTH");'
-                  ></div>
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                  The Silent Witness
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
-                  Clara Bennett
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                  Edit | Delete
-                </td>
-              </tr>
-              <tr class="border-t border-t-[#cedbe8]">
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkui-_GwB3bnfW7W-jHS_8KmQjTnRgjQpsh_hbYPgCPE06eRin6fcXzGiuvzr_MEFQP7t3wC23J3MEeQ0iVNNoLABc99yUSi9rn2zVkzTsZjVWwKE5afX5W-zf-dwhtkAEJ2VV-ylxynMt5cqxVUW-DSCFOGLckFx8YIe9QM-fi_Mk1ehcNqECnjcGvXcK9akLS9kDG_k1lhf4FwHtI4G7dJiEOWjjgjHnThjnkajI95fv9kgBhnjJ6E2eM5EYXr_SmWEkYJ00sxON");'
-                  ></div>
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                  The Emperor's Legacy
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
-                  Arthur Sterling
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                  Edit | Delete
-                </td>
-              </tr>
-              <tr class="border-t border-t-[#cedbe8]">
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTONTr3CiEq_TQHIgFe-Sk31cPQwIClVRdENpGzvDfd_qqAph8EyouDJL_bn02kj6kmMaSdA0BznIaV_nEie4qpxpzmSkpN3kYQ-wbgKl45xLk4MGYr7nQZnpo5ExjSnn0j7kAP6LD7qbvwyQth4x6TvuPL0kxhNdH6UsKnEKq4s8EV_mub27ndsiRgNQ7oRVkkmFSIj603hU3CCQpNL_qTWjjKJ99AI_xpmf-6UwWv3aCljgm2tZW-TLH6t6rJQLyTz825_5jreYO");'
-                  ></div>
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
-                  Lost in Translation
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
-                  Sophia Hayes
-                </td>
-                <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
-                  Edit | Delete
-                </td>
-              </tr>
+                <% @books.each do |book| %>
+                  <tr class="border-t border-t-[#cedbe8]">
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-56 h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                      <% if book.cover_image.attached? %>
+                        <%= image_tag book.cover_image.variant(resize_to_limit: [40, 40]), class: "rounded-full w-10 h-10 object-cover" %>
+                      <% else %>
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10"
+                          style='background-image: url("https://i.pravatar.cc/40?u=<%= book.id %>");'
+                        ></div>
+                      <% end %>
+                    </td>
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-176 h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">
+                      <%= link_to book.title, book_path(book) %>
+                    </td>
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-296 h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">
+                      <%= book.author %>
+                    </td>
+                    <td class="table-3d58d3d0-b9e7-438d-88f8-a7010b6322b8-column-416 h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">
+                      <%= link_to 'Edit', edit_book_path(book), class: "text-[#49719c]" %> |
+                      <%= link_to 'Delete', book_path(book), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: "text-[#49719c]" %>
+                    </td>
+                  </tr>
+                <% end %>
               </tbody>
             </table>
           </div>
