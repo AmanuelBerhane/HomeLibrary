@@ -1,0 +1,42 @@
+<%= form_with(model: book, local: true, html: { class: "space-y-6", multipart: true }) do |form| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold"><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</strong>
+      <ul class="mt-3 list-disc list-inside">
+        <% book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :title, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
+  </div>
+
+  <div>
+    <%= form.label :author, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :author, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
+  </div>
+
+  <div>
+    <%= form.label :genre, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :genre, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
+  </div>
+
+  <div>
+    <%= form.label :pages, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.number_field :pages, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" %>
+  </div>
+
+  <div>
+    <%= form.label :cover_image, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.file_field :cover_image, class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100" %>
+  </div>
+
+  <div class="flex justify-end gap-4">
+    <%= link_to 'Cancel', books_path, class: "inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+    <%= form.submit "Save Book", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+  </div>
+<% end %>
