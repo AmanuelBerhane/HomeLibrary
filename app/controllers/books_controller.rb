@@ -13,8 +13,7 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params.except(:cover_image))
-      @book.cover_image.attach(params[:book][:cover_image]) if params[:book][:cover_image]
+    if @book.update(book_params)
       redirect_to books_path, notice: 'Book was successfully updated.'
     else
       render :edit
@@ -24,12 +23,13 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
+    redirect_to books_path, notice: 'Book was successfully deleted.'
+    
   end
 
   def create
     @book = Book.new(book_params.except(:cover_image))
     if @book.save
-      @book.cover_image.attach(params[:book][:cover_image]) if params[:book][:cover_image]
       redirect_to @book
     else
       render 'new'
@@ -42,6 +42,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :author, :genre, :pages, :cover_image)
+    params.require(:book).permit(:title, :author, :genre, :pages)
   end
 end
