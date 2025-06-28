@@ -5,7 +5,9 @@ A Ruby on Rails CRUD application for tracking your home library books with respo
 ## Features
 
 - **Full CRUD Operations** for book management
-- **Responsive Design**
+    - **Book Addition**
+    - **Edit/Update Book**
+    - **Book Deletion**
 
 ## Technologies
 
